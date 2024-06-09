@@ -1,0 +1,573 @@
+{
+  "address": "0x1DaAB82c6D147D781d9370cb24c6414A94cf55Da",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "newDTI",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "oldDTI",
+          "type": "uint64"
+        }
+      ],
+      "name": "DTIChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousDeployer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newDeployer",
+          "type": "address"
+        }
+      ],
+      "name": "DeployerChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "newLTI",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "oldLTI",
+          "type": "uint32"
+        }
+      ],
+      "name": "LTVChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "_newrateOfInterest",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "oldrateOfInterest",
+          "type": "uint32"
+        }
+      ],
+      "name": "RateChanged",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DTI",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newDeployer",
+          "type": "address"
+        }
+      ],
+      "name": "changeDeployer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deployer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rateOfInterest",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveDTI",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveLTV",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveRate",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveTotalAllowableFunds",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveTotalLoansDisbursed",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieveTotalPreApprovedLoans",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_LTV",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAllowableFunds",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalLoansDisbursed",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalPreApprovedLoans",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "_newDTI",
+          "type": "uint64"
+        }
+      ],
+      "name": "updateDTI",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_newLTV",
+          "type": "uint32"
+        }
+      ],
+      "name": "updateLTV",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_newrateOfInterest",
+          "type": "uint32"
+        }
+      ],
+      "name": "updateRate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newTotalAllowableFunds",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateTotalAllowableFunds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "_newTotalLoansDisbursed",
+          "type": "uint128"
+        }
+      ],
+      "name": "updateTotalLoansDisbursed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "_newTotalPreApprovedLoans",
+          "type": "uint128"
+        }
+      ],
+      "name": "updateTotalPreApprovedLoans",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xd6579fdebb0e539c8e519162eba17fcd158e87ab898219d44ed07a47aadf11ff",
+  "receipt": {
+    "to": null,
+    "from": "0x7057466420B99F697340cCD551E3c510181558C5",
+    "contractAddress": "0x1DaAB82c6D147D781d9370cb24c6414A94cf55Da",
+    "transactionIndex": 414,
+    "gasUsed": "752736",
+    "logsBloom": "0x000000000000000000000000000000000000000000002000008000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000008000010000000000000801000000000000000000000200000000000000000008000000000000080000800000000000005000000000000000000008000000000000000000000000000000000000000000002000000000000000000000000000010000000000c0000000000000000000004000000000000000000001000000000000000000000000000000100000000020000000000000000000000000000000000000000000000000000000000100100000",
+    "blockHash": "0x806f1301475c12691f1c4ec76cf743776f779124c0f301a56ccc890887f9bef1",
+    "transactionHash": "0xd6579fdebb0e539c8e519162eba17fcd158e87ab898219d44ed07a47aadf11ff",
+    "logs": [
+      {
+        "transactionIndex": 414,
+        "blockNumber": 50028328,
+        "transactionHash": "0xd6579fdebb0e539c8e519162eba17fcd158e87ab898219d44ed07a47aadf11ff",
+        "address": "0x1DaAB82c6D147D781d9370cb24c6414A94cf55Da",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000007057466420b99f697340ccd551e3c510181558c5"
+        ],
+        "data": "0x",
+        "logIndex": 467,
+        "blockHash": "0x806f1301475c12691f1c4ec76cf743776f779124c0f301a56ccc890887f9bef1"
+      },
+      {
+        "transactionIndex": 414,
+        "blockNumber": 50028328,
+        "transactionHash": "0xd6579fdebb0e539c8e519162eba17fcd158e87ab898219d44ed07a47aadf11ff",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x0000000000000000000000007057466420b99f697340ccd551e3c510181558c5",
+          "0x000000000000000000000000959a4d857b7071c38878beb9dc77051b5fed1dfd"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000003389d6326ff4c000000000000000000000000000000000000000000000000050bcdd7661893a88000000000000000000000000000000000000000000000634d73058c194746440000000000000000000000000000000000000000000000000508953a02f1945c8000000000000000000000000000000000000000000000634d763e297c6e45900",
+        "logIndex": 468,
+        "blockHash": "0x806f1301475c12691f1c4ec76cf743776f779124c0f301a56ccc890887f9bef1"
+      }
+    ],
+    "blockNumber": 50028328,
+    "cumulativeGasUsed": "12290052",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x7057466420B99F697340cCD551E3c510181558C5"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "b84c1e074d3ef19546b10869bc3405ba",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"newDTI\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"oldDTI\",\"type\":\"uint64\"}],\"name\":\"DTIChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousDeployer\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newDeployer\",\"type\":\"address\"}],\"name\":\"DeployerChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"newLTI\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"oldLTI\",\"type\":\"uint32\"}],\"name\":\"LTVChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"_newrateOfInterest\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"oldrateOfInterest\",\"type\":\"uint32\"}],\"name\":\"RateChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DTI\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newDeployer\",\"type\":\"address\"}],\"name\":\"changeDeployer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deployer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rateOfInterest\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveDTI\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveLTV\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveRate\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveTotalAllowableFunds\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveTotalLoansDisbursed\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveTotalPreApprovedLoans\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_LTV\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalAllowableFunds\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalLoansDisbursed\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalPreApprovedLoans\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"_newDTI\",\"type\":\"uint64\"}],\"name\":\"updateDTI\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_newLTV\",\"type\":\"uint32\"}],\"name\":\"updateLTV\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_newrateOfInterest\",\"type\":\"uint32\"}],\"name\":\"updateRate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newTotalAllowableFunds\",\"type\":\"uint256\"}],\"name\":\"updateTotalAllowableFunds\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint128\",\"name\":\"_newTotalLoansDisbursed\",\"type\":\"uint128\"}],\"name\":\"updateTotalLoansDisbursed\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint128\",\"name\":\"_newTotalPreApprovedLoans\",\"type\":\"uint128\"}],\"name\":\"updateTotalPreApprovedLoans\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/rate.sol\":\"Rate\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xba43b97fba0d32eb4254f6a5a297b39a19a247082a02d6e69349e071e2946218\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/rate.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\r\\n\\r\\ncontract Rate is Ownable {\\r\\n  modifier onlyDeployer() {\\r\\n    require(msg.sender == deployer, \\\"Not Allowed\\\");\\r\\n    _;\\r\\n  }\\r\\n\\r\\n  //public adddress variable to store the address of the deployer\\r\\n  address public deployer;\\r\\n\\r\\n  //public variable to store the rate of Interest for the Loan\\r\\n  uint32 public rateOfInterest; // <=3 digits\\r\\n\\r\\n  //public variable to store the Loan to Value Ration\\r\\n  uint32 public s_LTV; //<=3 digits\\r\\n\\r\\n  //public variable to store the Debt to Income Ratio\\r\\n  uint64 public DTI; //<=3 digits\\r\\n\\r\\n  uint128 public totalPreApprovedLoans; // 100000000000000\\r\\n\\r\\n  uint128 public totalLoansDisbursed; //100000000000000\\r\\n\\r\\n  uint256 public totalAllowableFunds;\\r\\n\\r\\n  // uint256 public approvedButNotDisbursedLoans; //can be calculated\\r\\n\\r\\n  // uint256 public totalAvailableFunds; //can be calculated\\r\\n\\r\\n  // Emitted when the rateOfInterest changes\\r\\n  event RateChanged(uint32 _newrateOfInterest, uint32 oldrateOfInterest);\\r\\n\\r\\n  //Emitted when the LTI is changed\\r\\n  event LTVChanged(uint32 newLTI, uint32 oldLTI);\\r\\n\\r\\n  // Emitted when the DTI changes\\r\\n  event DTIChanged(uint64 newDTI, uint64 oldDTI);\\r\\n\\r\\n  // Emitted when the deployer address changes\\r\\n  event DeployerChanged(address indexed previousDeployer, address indexed newDeployer);\\r\\n\\r\\n  constructor(address _owner) {\\r\\n    //sets the given address as the deployer of the contract.\\r\\n    deployer = _owner;\\r\\n  }\\r\\n\\r\\n  //Function to change the deployer address in the contract.\\r\\n  function changeDeployer(address _newDeployer) public onlyDeployer {\\r\\n    address _prevDeployer = deployer;\\r\\n    deployer = _newDeployer;\\r\\n\\r\\n    emit DeployerChanged(_prevDeployer, _newDeployer);\\r\\n  }\\r\\n\\r\\n  // Stores a new rateOfInterest in the contract, can be only triggered by the DAO\\r\\n  function updateRate(uint32 _newrateOfInterest) public onlyOwner {\\r\\n    uint32 val = rateOfInterest;\\r\\n    rateOfInterest = _newrateOfInterest;\\r\\n\\r\\n    emit RateChanged(_newrateOfInterest, val);\\r\\n    delete val;\\r\\n  }\\r\\n\\r\\n  // Reads the last stored rateOfInterest\\r\\n  function retrieveRate() public view returns (uint32) {\\r\\n    return rateOfInterest;\\r\\n  }\\r\\n\\r\\n  //Functoin to update the loan to Value Ratio, it can only be triggered by the DAO.\\r\\n  function updateLTV(uint32 _newLTV) public onlyOwner {\\r\\n    uint32 _prevLTV = s_LTV;\\r\\n    s_LTV = _newLTV;\\r\\n\\r\\n    emit LTVChanged(_prevLTV, _newLTV);\\r\\n    delete _prevLTV;\\r\\n  }\\r\\n\\r\\n  //Function that reads and returns the value of LTV\\r\\n  function retrieveLTV() public view returns (uint32) {\\r\\n    return s_LTV;\\r\\n  }\\r\\n\\r\\n  //Function that updates the value of Debt to Income Ratio, it can be only triggered by the DAO.\\r\\n  function updateDTI(uint64 _newDTI) public onlyOwner {\\r\\n    uint64 _prevDTI = DTI;\\r\\n    DTI = _newDTI;\\r\\n\\r\\n    emit DTIChanged(_prevDTI, _newDTI);\\r\\n    delete _prevDTI;\\r\\n  }\\r\\n\\r\\n  //Function to retrieve the value of DTI\\r\\n  function retrieveDTI() public view returns (uint64) {\\r\\n    return DTI;\\r\\n  }\\r\\n\\r\\n  function updateTotalAllowableFunds(uint256 _newTotalAllowableFunds) public onlyDeployer {\\r\\n    totalAllowableFunds = _newTotalAllowableFunds;\\r\\n  }\\r\\n\\r\\n  function updateTotalLoansDisbursed(uint128 _newTotalLoansDisbursed) public onlyDeployer {\\r\\n    totalLoansDisbursed = _newTotalLoansDisbursed;\\r\\n  }\\r\\n\\r\\n  function updateTotalPreApprovedLoans(uint128 _newTotalPreApprovedLoans) public onlyDeployer {\\r\\n    totalPreApprovedLoans = _newTotalPreApprovedLoans;\\r\\n  }\\r\\n\\r\\n  function retrieveTotalAllowableFunds() public view returns (uint256) {\\r\\n    return totalAllowableFunds;\\r\\n  }\\r\\n\\r\\n  function retrieveTotalLoansDisbursed() public view returns (uint128) {\\r\\n    return totalLoansDisbursed;\\r\\n  }\\r\\n\\r\\n  function retrieveTotalPreApprovedLoans() public view returns (uint128) {\\r\\n    return totalPreApprovedLoans;\\r\\n  }\\r\\n}\\r\\n\",\"keccak256\":\"0x8a96eae65f0e16971a86ef87ec102a3851779ea2f4b4e6a6c68372287634b3af\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610cc8380380610cc883398101604081905261002f916100ad565b6100383361005d565b600180546001600160a01b0319166001600160a01b03929092169190911790556100dd565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000602082840312156100bf57600080fd5b81516001600160a01b03811681146100d657600080fd5b9392505050565b610bdc806100ec6000396000f3fe608060405234801561001057600080fd5b506004361061018d5760003560e01c80637963e50f116100e3578063b272839a1161008c578063dc881c4c11610066578063dc881c4c146103fe578063defdfae614610426578063f2fde38b1461043957600080fd5b8063b272839a146103a8578063b9e9c7bc146103c2578063d5f39488146103de57600080fd5b80638da5cb5b116100bd5780638da5cb5b1461034e5780639dcf82411461038d5780639ee9c1d1146103a057600080fd5b80637963e50f1461031657806381a3897914610329578063867dec1a1461033c57600080fd5b80633824e75c11610145578063619e6ccc1161011f578063619e6ccc146102b8578063715018a6146102fb57806375734cb51461030357600080fd5b80633824e75c146102795780633bfb8ee514610290578063491bb081146102a557600080fd5b80631fc2a361116101765780631fc2a361146101f657806324779e291461022257806325f5a8e01461024c57600080fd5b806304d2775514610192578063178d8ae3146101ce575b600080fd5b60015474010000000000000000000000000000000000000000900463ffffffff165b60405163ffffffff90911681526020015b60405180910390f35b6001546101b49074010000000000000000000000000000000000000000900463ffffffff1681565b6001546101b4907801000000000000000000000000000000000000000000000000900463ffffffff1681565b6001547801000000000000000000000000000000000000000000000000900463ffffffff166101b4565b6002546102609067ffffffffffffffff1681565b60405167ffffffffffffffff90911681526020016101c5565b61028260045481565b6040519081526020016101c5565b6102a361029e366004610ace565b61044c565b005b6102a36102b3366004610aff565b6104cf565b6002546801000000000000000090046fffffffffffffffffffffffffffffffff165b6040516fffffffffffffffffffffffffffffffff90911681526020016101c5565b6102a361055f565b6102a3610311366004610b25565b610573565b6102a3610324366004610b57565b610648565b6102a3610337366004610b25565b6106ce565b60025467ffffffffffffffff16610260565b60005473ffffffffffffffffffffffffffffffffffffffff165b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016101c5565b6102a361039b366004610aff565b610792565b600454610282565b6003546fffffffffffffffffffffffffffffffff166102da565b6003546102da906fffffffffffffffffffffffffffffffff1681565b6001546103689073ffffffffffffffffffffffffffffffffffffffff1681565b6002546102da906801000000000000000090046fffffffffffffffffffffffffffffffff1681565b6102a3610434366004610b70565b610829565b6102a3610447366004610b70565b610921565b6104546109d8565b6002805467ffffffffffffffff8381167fffffffffffffffffffffffffffffffffffffffffffffffff000000000000000083168117909355604080519190921680825260208201939093527f11b7e12bc7ba69838b4508dbaa630616d7d791f065b494e02002ad9b91c0b20e91015b60405180910390a15050565b6104d76109d8565b6001805463ffffffff838116740100000000000000000000000000000000000000008181027fffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffff85161790945560408051918252939092041660208201819052917f2597e6d1348e47ad5a08a8304cdd26bddeb8e697547f54397719be5e5637b0d691016104c3565b6105676109d8565b6105716000610a59565b565b60015473ffffffffffffffffffffffffffffffffffffffff1633146105f9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064015b60405180910390fd5b600280546fffffffffffffffffffffffffffffffff90921668010000000000000000027fffffffffffffffff00000000000000000000000000000000ffffffffffffffff909216919091179055565b60015473ffffffffffffffffffffffffffffffffffffffff1633146106c9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b600455565b60015473ffffffffffffffffffffffffffffffffffffffff16331461074f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b600380547fffffffffffffffffffffffffffffffff00000000000000000000000000000000166fffffffffffffffffffffffffffffffff92909216919091179055565b61079a6109d8565b6001805463ffffffff83811678010000000000000000000000000000000000000000000000008181027fffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffff85161790945560408051949093049091168084526020840191909152917fae97aa11c94649dc81938b01ef9b5bc13a481058d2a3a637dde62fb7f16d9ae991016104c3565b60015473ffffffffffffffffffffffffffffffffffffffff1633146108aa576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b6001805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681179093556040519116919082907fb425bf30023a30c35ee17f3f416360da7ea96a46b589cfa6a14f39dc98a52bca90600090a35050565b6109296109d8565b73ffffffffffffffffffffffffffffffffffffffff81166109cc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016105f0565b6109d581610a59565b50565b60005473ffffffffffffffffffffffffffffffffffffffff163314610571576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016105f0565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b600060208284031215610ae057600080fd5b813567ffffffffffffffff81168114610af857600080fd5b9392505050565b600060208284031215610b1157600080fd5b813563ffffffff81168114610af857600080fd5b600060208284031215610b3757600080fd5b81356fffffffffffffffffffffffffffffffff81168114610af857600080fd5b600060208284031215610b6957600080fd5b5035919050565b600060208284031215610b8257600080fd5b813573ffffffffffffffffffffffffffffffffffffffff81168114610af857600080fdfea26469706673582212208837e04b0e69324b813e784b28fc6a4939f14041f10d877caf9ee15fcb03fcda64736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061018d5760003560e01c80637963e50f116100e3578063b272839a1161008c578063dc881c4c11610066578063dc881c4c146103fe578063defdfae614610426578063f2fde38b1461043957600080fd5b8063b272839a146103a8578063b9e9c7bc146103c2578063d5f39488146103de57600080fd5b80638da5cb5b116100bd5780638da5cb5b1461034e5780639dcf82411461038d5780639ee9c1d1146103a057600080fd5b80637963e50f1461031657806381a3897914610329578063867dec1a1461033c57600080fd5b80633824e75c11610145578063619e6ccc1161011f578063619e6ccc146102b8578063715018a6146102fb57806375734cb51461030357600080fd5b80633824e75c146102795780633bfb8ee514610290578063491bb081146102a557600080fd5b80631fc2a361116101765780631fc2a361146101f657806324779e291461022257806325f5a8e01461024c57600080fd5b806304d2775514610192578063178d8ae3146101ce575b600080fd5b60015474010000000000000000000000000000000000000000900463ffffffff165b60405163ffffffff90911681526020015b60405180910390f35b6001546101b49074010000000000000000000000000000000000000000900463ffffffff1681565b6001546101b4907801000000000000000000000000000000000000000000000000900463ffffffff1681565b6001547801000000000000000000000000000000000000000000000000900463ffffffff166101b4565b6002546102609067ffffffffffffffff1681565b60405167ffffffffffffffff90911681526020016101c5565b61028260045481565b6040519081526020016101c5565b6102a361029e366004610ace565b61044c565b005b6102a36102b3366004610aff565b6104cf565b6002546801000000000000000090046fffffffffffffffffffffffffffffffff165b6040516fffffffffffffffffffffffffffffffff90911681526020016101c5565b6102a361055f565b6102a3610311366004610b25565b610573565b6102a3610324366004610b57565b610648565b6102a3610337366004610b25565b6106ce565b60025467ffffffffffffffff16610260565b60005473ffffffffffffffffffffffffffffffffffffffff165b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016101c5565b6102a361039b366004610aff565b610792565b600454610282565b6003546fffffffffffffffffffffffffffffffff166102da565b6003546102da906fffffffffffffffffffffffffffffffff1681565b6001546103689073ffffffffffffffffffffffffffffffffffffffff1681565b6002546102da906801000000000000000090046fffffffffffffffffffffffffffffffff1681565b6102a3610434366004610b70565b610829565b6102a3610447366004610b70565b610921565b6104546109d8565b6002805467ffffffffffffffff8381167fffffffffffffffffffffffffffffffffffffffffffffffff000000000000000083168117909355604080519190921680825260208201939093527f11b7e12bc7ba69838b4508dbaa630616d7d791f065b494e02002ad9b91c0b20e91015b60405180910390a15050565b6104d76109d8565b6001805463ffffffff838116740100000000000000000000000000000000000000008181027fffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffff85161790945560408051918252939092041660208201819052917f2597e6d1348e47ad5a08a8304cdd26bddeb8e697547f54397719be5e5637b0d691016104c3565b6105676109d8565b6105716000610a59565b565b60015473ffffffffffffffffffffffffffffffffffffffff1633146105f9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064015b60405180910390fd5b600280546fffffffffffffffffffffffffffffffff90921668010000000000000000027fffffffffffffffff00000000000000000000000000000000ffffffffffffffff909216919091179055565b60015473ffffffffffffffffffffffffffffffffffffffff1633146106c9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b600455565b60015473ffffffffffffffffffffffffffffffffffffffff16331461074f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b600380547fffffffffffffffffffffffffffffffff00000000000000000000000000000000166fffffffffffffffffffffffffffffffff92909216919091179055565b61079a6109d8565b6001805463ffffffff83811678010000000000000000000000000000000000000000000000008181027fffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffff85161790945560408051949093049091168084526020840191909152917fae97aa11c94649dc81938b01ef9b5bc13a481058d2a3a637dde62fb7f16d9ae991016104c3565b60015473ffffffffffffffffffffffffffffffffffffffff1633146108aa576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600b60248201527f4e6f7420416c6c6f77656400000000000000000000000000000000000000000060448201526064016105f0565b6001805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681179093556040519116919082907fb425bf30023a30c35ee17f3f416360da7ea96a46b589cfa6a14f39dc98a52bca90600090a35050565b6109296109d8565b73ffffffffffffffffffffffffffffffffffffffff81166109cc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016105f0565b6109d581610a59565b50565b60005473ffffffffffffffffffffffffffffffffffffffff163314610571576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016105f0565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b600060208284031215610ae057600080fd5b813567ffffffffffffffff81168114610af857600080fd5b9392505050565b600060208284031215610b1157600080fd5b813563ffffffff81168114610af857600080fd5b600060208284031215610b3757600080fd5b81356fffffffffffffffffffffffffffffffff81168114610af857600080fd5b600060208284031215610b6957600080fd5b5035919050565b600060208284031215610b8257600080fd5b813573ffffffffffffffffffffffffffffffffffffffff81168114610af857600080fdfea26469706673582212208837e04b0e69324b813e784b28fc6a4939f14041f10d877caf9ee15fcb03fcda64736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 396,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 15160,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "deployer",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 15162,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "rateOfInterest",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 15164,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "s_LTV",
+        "offset": 24,
+        "slot": "1",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 15166,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "DTI",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint64"
+      },
+      {
+        "astId": 15168,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "totalPreApprovedLoans",
+        "offset": 8,
+        "slot": "2",
+        "type": "t_uint128"
+      },
+      {
+        "astId": 15170,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "totalLoansDisbursed",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_uint128"
+      },
+      {
+        "astId": 15172,
+        "contract": "contracts/rate.sol:Rate",
+        "label": "totalAllowableFunds",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_uint128": {
+        "encoding": "inplace",
+        "label": "uint128",
+        "numberOfBytes": "16"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      },
+      "t_uint64": {
+        "encoding": "inplace",
+        "label": "uint64",
+        "numberOfBytes": "8"
+      }
+    }
+  }
+}
